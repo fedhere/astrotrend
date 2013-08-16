@@ -217,6 +217,6 @@ if __name__ == "__main__":
     print output_filename
     os.system("mkdir %s"%datetime.date.today())
     cloud = wordcloud(words, counts, output_filename,font_path=FONT_PATH)
-    os.system("cp %s ../videos/thisweekarxiv.png "%output_filename)
-    os.system("chmod 644  ../videos/thisweekarxiv.png ")
+    #os.system("cp %s ../videos/thisweekarxiv.png "%output_filename)
+    #os.system("chmod 644  ../videos/thisweekarxiv.png ")
     
