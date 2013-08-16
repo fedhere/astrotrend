@@ -167,7 +167,6 @@ class wordcloud:
 def mycounter(s):
     mydic = {}
     for w in set(s.split()):
-        print w,len(re.findall(w, s))
         if len(w)<3:
             continue
         try:
@@ -214,7 +213,7 @@ if __name__ == "__main__":
     counts = counts[counts > MINCOUNTS]
     
     output_filename = "%s/cloud.png"%datetime.date.today()
-    print output_filename
+    print "creating the image and saving it  to ", output_filename+". This could take a minute..." 
     os.system("mkdir %s"%datetime.date.today())
     cloud = wordcloud(words, counts, output_filename,font_path=FONT_PATH)
     #os.system("cp %s ../videos/thisweekarxiv.png "%output_filename)
