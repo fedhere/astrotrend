@@ -1,0 +1,4 @@
+    var fs = require(['fs'], function (fs) {
+console.log("foo is now loaded.")
+});
+eval(fs.readFileSync('js/mapper.js').toString());
