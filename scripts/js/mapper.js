@@ -70,12 +70,13 @@ function chordRdr (matrix, mmap) {
       m.tvalue = +d.target.value;
       m.ttotal = _.reduce(matrix[j], function (k, n) { return k + n }, 0);
     } else {
-	console.log("here",mmap)
+	console.log("here",mmap,d)
       g = _.where(mmap, {id: d.index });
       m.gname = g[0].name;
       m.gdata = g[0].data;
       m.gvalue = d.value;
-      m.gfielddef = d.field;
+      m.gfielddef = g[0].field;
+      
     }
     m.mtotal = _.reduce(matrix, function (m1, n1) { 
       return m1 + _.reduce(n1, function (m2, n2) { return m2 + n2}, 0);

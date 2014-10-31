@@ -163,8 +163,8 @@ var mapOut = 'data/arxiv-map.json';
                   d3.select("#tooltip")
                     .style("visibility", "visible")
                     .html(chordTip(rdr(d)))
-                    .style("top", function () { return (d3.event.pageY - 100)+"px"})
-                    .style("left", function () { return (d3.event.pageX - 100)+"px";})
+                    .style("top", function () { return (d3.event.pageY - 30)+"px"})
+                    .style("left", function () { return (d3.event.pageX - 30)+"px";})
                 })
                 .on("mouseout", function (d) { d3.select("#tooltip").style("visibility", "hidden") });
 
