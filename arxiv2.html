@@ -32,16 +32,33 @@
       #circle:hover path.fade {
         display: none;
       }
+table {
+    width: 80%;
+    border: 1;
+    font-size:1.5em;
+      color:#aaa;
+}
     </style>
   </head>
   <body bgcolor="#FFF8DC">
-    <table border="1" style="width:45%">
-  <tr><td>
 
+    <table>
+  <tr><td width=35%>Wait a few seconds while statistics are being computed....<p>
+    <div id="charts"></div>
+    <div id="tooltip"></div>
+</td><td>
 
-    This is a natural language analysis of the Arxiv.org postings from the past week. <p>
-    Wait a few seconds while statistics are being computed....<p>
-    The color of the wedges represents the field the word most commonly appears in. Each word is linked to each word it appears paired more than once in the week's Arxiv.org titles. <p>
+    This is a natural language analysis of the Arxiv.org postings from the past week (7 days leading to     <script type="text/javascript">
+      var date = new Date()
+var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var monthname=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+document.write(weekday[date.getDay()] + " ")
+document.write(monthname[date.getMonth()] + " ")
+document.write(date.getDate() + " ")
+document.write(date.getFullYear())
+</script>). <p>
+    
+    The color of the wedges  represents the field the word most commonly appears in. Each word is linked to each word it appears paired more than once in the week's Arxiv.org titles. <p>
 Roll over each wedge to see more information about each word included in the graph, and on the arc to for some information on the word co-occurrence.
 <p>
     The code is on public on <a href="https://github.com/fedhere/astrotrend">github</a> and it is very much a work in progress.  Text is parsed in gathered and python and  the graphics is created in <a href="http://d3js.org/">d3</a>, which is awesome, and it leverages <b> heavily</b> off this great <a href="http://www.delimited.io/blog/2013/12/8/chord-diagrams-in-d3">blogpost</a> by <a href="http://www.delimited.io/about/">Steve Hall</a>.
@@ -49,8 +66,8 @@ Roll over each wedge to see more information about each word included in the gra
 (And here is a simple word <a href="http://cosmo.nyu.edu/~fb55/vizs/astrotrend/2014-10-31/cloud.png">cloud</a>, if you are into that kind of stuff...)</td>
   </tr>
 </table>
-    <div id="charts"></div>
-    <div id="tooltip"></div>
+
+
     <script src="lib/d3.js"></script>
     <script src="lib/underscore.js"></script>
     <script src="scripts/js/mapper.js"></script>
@@ -84,6 +101,7 @@ var mapOut = 'data/arxiv-map.json';
 
 
       });
+
       //*******************************************************************
       //  DRAW THE CHORD DIAGRAM
       //*******************************************************************
