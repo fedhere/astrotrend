@@ -260,7 +260,7 @@ if __name__ == '__main__':
     mymatrix=np.zeros((len(alllist),len(alllist)),int)
     print mymatrix.shape
     import csv
-    with open('/Users/fbianco/Downloads/d3-chord-diagrams-master/data/arxiv.csv', 'wb') as csvfile:
+    with open('data/arxiv.csv', 'wb') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=' ', quotechar=' ',quoting=csv.QUOTE_NONE)
         spamwriter.writerow(['word1,word2,count,field,fielddef'])
         for i,word1 in enumerate(alllist):

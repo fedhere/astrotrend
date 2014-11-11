@@ -31,7 +31,7 @@ function chordMpr (data) {
   },
   mpr.printMatrix = function () {
     _.each(matrix, function (elem) {
-      console.log(elem);
+//      console.log(elem);
     })
   },
   mpr.addToMap = function (value, info, field) {
@@ -57,7 +57,7 @@ function chordRdr (matrix, mmap) {
   return function (d) {
     var i,j,s,t,g,m = {};
     if (d.source) {
-	console.log("source",d.source)
+//	console.log("source",d.source)
       i = d.source.index; j = d.target.index;
       s = _.where(mmap, {id: i });
       t = _.where(mmap, {id: j });
@@ -70,7 +70,7 @@ function chordRdr (matrix, mmap) {
       m.tvalue = +d.target.value;
       m.ttotal = _.reduce(matrix[j], function (k, n) { return k + n }, 0);
     } else {
-	console.log("here",mmap,d)
+//	console.log("here",mmap,d)
       g = _.where(mmap, {id: d.index });
       m.gname = g[0].name;
       m.gdata = g[0].data;
