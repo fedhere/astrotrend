@@ -10,3 +10,5 @@ to run just type python getwords.py (tuple.py for the chord diagram)
 as always, it is work in progress
 
 it saves a png image of the cloud and an html file for the diagram. it may take a minute to create them.
+
+[!alt text] ("http://cosmo.nyu.edu/~fb55/vizs/videos/2014-10-31_cooccurrence.png")
